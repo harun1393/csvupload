@@ -1,0 +1,41 @@
+{% extends "client/base.html" %}
+	{% block content %}
+	<h4>Finance Table</h4>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<td>Product Name</td>
+				<td>Price</td>
+			</tr>
+		</thead>
+		{% for product in finance_products %}
+		<tr>
+				<td>{{ product.product_name }}</td>
+				<td>{{ product.price }}</td>
+		</tr>
+			{% endfor %}
+	</table>
+
+	
+	<h4>Client Table</h4>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<td>Name</td>
+				<td>Phone No.</td>
+				<td>Email</td>
+				<td>Adress</td>
+				<td>Date</td>
+			</tr>
+		</thead>
+		{% for product in client_products %}
+		<tr>
+				<td>{{ product.name}}</td>
+				<td>{{ product.email }}</td>
+				<td>{{ product.phone }}</td>
+				<td>{{ product.adress }}</td>
+				<td>{{ product.date }}</td>
+		</tr>
+			{% endfor %}
+	</table>
+{% endblock %}
